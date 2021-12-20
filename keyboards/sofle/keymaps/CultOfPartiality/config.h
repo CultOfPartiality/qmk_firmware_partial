@@ -10,6 +10,7 @@ for more options.
 #define GRAVE_ESC_CTRL_OVERRIDE
 
 #define TAPPING_TOGGLE 1
+#undef TAPPING_TERM // Remove the default vaule set in the sofle keymap
 #define TAPPING_TERM 150
 
 #define ONESHOT_TAP_TOGGLE 5
