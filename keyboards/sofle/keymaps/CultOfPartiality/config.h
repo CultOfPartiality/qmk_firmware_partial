@@ -7,14 +7,18 @@ for more options.
 
 #define MASTER_RIGHT
 
-#define NO_MUSIC_MODE 
+// Chasing space savings
+#define NO_MUSIC_MODE
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
 
 
 #define GRAVE_ESC_CTRL_OVERRIDE
 
 #define TAPPING_TOGGLE 1
 #undef  TAPPING_TERM // Remove the default vaule set in the sofle keymap
-#define TAPPING_TERM 150
+#define TAPPING_TERM 170
+//#define TAPPING_TERM_PER_KEY
 
 #define ONESHOT_TAP_TOGGLE 5
 #define ONESHOT_TIMEOUT 3000
