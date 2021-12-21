@@ -2,13 +2,13 @@
 KC_Q,				KC_W,				KC_E,				KC_R,				KC_T,				/**/	KC_Y,				KC_U,				KC_I,				KC_O,				KC_P,				\
 LGUI_T(KC_A),		LALT_T(KC_S),		LCTL_T(KC_D),		LSFT_T(KC_F),		KC_G,				/**/	KC_H,				LSFT_T(KC_J),		LCTL_T(KC_K),		LALT_T(KC_L),		LGUI_T(KC_QUOT),	\
 LT(BUTTON, KC_Z),	ALGR_T(KC_X),		KC_C,				KC_V,				KC_B,				/**/	KC_N,				KC_M,				KC_COMM,			ALGR_T(KC_DOT),	 LT(BUTTON, KC_SLSH),	\
-										LT(MEDIA, KC_ESC),	LT(NAV, KC_SPC),	LT(MOUSE, KC_TAB),	/**/	LT(SYM, KC_ENT),	LT(NUM, KC_BSPC),	LT(FUN, KC_DEL)
+										LT(MEDIA, KC_ESC),	LT(NAV, KC_SPC),	LT(MOUSE, KC_TAB),	/**/	LT(SYM, KC_BSPC),	LT(NUM, KC_ENT),	LT(FUN, KC_DEL)
 
 #define LAYER_KEYMAP_NAV \
 RESET,				U_NA,				U_NA,				U_NA,				U_NA,				/**/	KC_INS,				KC_HOME,			KC_UP,				KC_END,				KC_PGUP,			\
 KC_LGUI,			KC_LALT,			KC_LCTL,			KC_LSFT,			U_NA,				/**/	KC_CAPS,			KC_LEFT,			KC_DOWN,			KC_RGHT,			KC_PGDN,			\
 U_NA,				KC_ALGR,			U_NA,				U_NA,				U_NA,				/**/	U_RDO,				U_PST,				U_CPY,				U_CUT,				U_UND,				\
-										U_NA,				U_NA,				U_NA,				/**/	KC_ENT,				KC_BSPC,			KC_DEL
+										U_NA,				U_NA,				U_NA,				/**/	KC_BSPC,			KC_ENT,			KC_DEL
 
 #define LAYER_KEYMAP_MOUSE \
 RESET,				U_NA,				U_NA,				U_NA,				U_NA,				/**/	U_NU,				KC_WH_L,			KC_MS_U,			KC_WH_R,			KC_WH_U,			\
