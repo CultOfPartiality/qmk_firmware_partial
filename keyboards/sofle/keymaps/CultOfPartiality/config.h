@@ -7,7 +7,7 @@ for more options.
 
 #define MASTER_RIGHT
 
-#define NO_MUSIC_MODE
+#define NO_MUSIC_MODE 
 
 
 #define GRAVE_ESC_CTRL_OVERRIDE

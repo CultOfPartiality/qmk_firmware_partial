@@ -2,7 +2,7 @@
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 ENCODER_ENABLE = yes
-CONSOLE_ENABLE = no
+CONSOLE_ENABLE = no 
 EXTRAKEY_ENABLE = yes
 AUTO_SHIFT_ENABLE = yes # Auto Shift, adding in after seeing miryoku
 
