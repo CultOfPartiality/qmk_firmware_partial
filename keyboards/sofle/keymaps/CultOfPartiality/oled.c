@@ -1,6 +1,6 @@
 #ifdef OLED_ENABLE
 #    include QMK_KEYBOARD_H
- 
+
 #include "defines.h"
 
 static void render_logo(void) {
@@ -39,6 +39,7 @@ static void print_status_narrow(void) {
     oled_write_ln_P(PSTR("LAYER"), false);
     switch (get_highest_layer(layer_state)) {
         case _NORMAL:
+        case _MODTAP: // Seems to work find without this, but I'm sure it probably should be here...
             oled_write_P(PSTR("Base\n"), false);
             break;
         case _RAISE:
