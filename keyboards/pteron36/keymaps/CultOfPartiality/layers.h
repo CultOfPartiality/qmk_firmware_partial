@@ -23,7 +23,7 @@ U_NA,				KC_ALGR,			U_NA,				U_NA,				U_NA,				/**/	U_NU,				U_NU,				U_NU,				U
 										U_NA,				U_NA,				U_NA,				/**/	KC_MSTP,			KC_MPLY,			KC_MUTE
 
 #define LAYER_KEYMAP_NUM \
-KC_1,				KC_2,				KC_3,				KC_4,				KC_5,				/**/	U_NA,				U_NA,				U_NA,				U_NA,				RESET,				\
+KC_1,				KC_2,				KC_3,				KC_4,				KC_5,				/**/	KC_6,				KC_7,				KC_8,				KC_9,				KC_0,				\
 KC_SCLN,			KC_4,				KC_5,				KC_6,				KC_EQL,				/**/	U_NA,				KC_LSFT,			KC_LCTL,			KC_LALT,			KC_LGUI,			\
 KC_GRV,				KC_1,				KC_2,				KC_3,				KC_BSLS,			/**/	U_NA,				U_NA,				U_NA,				KC_ALGR,			U_NA,				\
 										KC_DOT,				KC_0,				KC_MINS,			/**/	U_NA,				U_NA,				U_NA
@@ -35,9 +35,9 @@ KC_TILD,			KC_EXLM,			KC_AT,				KC_HASH,			KC_PIPE,			/**/	U_NA,				U_NA,				U_N
 										KC_LPRN,			KC_RPRN,			KC_UNDS,			/**/	U_NA,				U_NA,				U_NA
 
 #define LAYER_KEYMAP_FUN \
-KC_F12,				KC_F7,				KC_F8,				KC_F9,				KC_PSCR,			/**/	U_NA,				U_NA,				U_NA,				U_NA,				RESET,				\
-KC_F11,				KC_F4,				KC_F5,				KC_F6,				KC_SLCK,			/**/	U_NA,				KC_LSFT,			KC_LCTL,			KC_LALT,			KC_LGUI,			\
-KC_F10,				KC_F1,				KC_F2,				KC_F3,				KC_PAUS,			/**/	U_NA,				U_NA,				U_NA,				KC_ALGR,			U_NA,				\
+KC_F1,				KC_F2,				KC_F3,				KC_F4,				KC_F5,		    	/**/	KC_F6,				KC_F7,				KC_F8,				KC_F9,				KC_F10,				\
+KC_F6,				KC_F7,				KC_F8,				KC_F9,				KC_F10,		    	/**/	U_NA,				KC_LSFT,			KC_LCTL,			KC_LALT,			LGUI_T(KC_F11),		\
+KC_F11,				KC_F12,				U_NA,				U_NA,				U_NA,		    	/**/	U_NA,				U_NA,				U_NA,				KC_ALGR,			KC_F12,				\
 										KC_APP,				KC_SPC,				KC_TAB,				/**/	U_NA,				U_NA,				U_NA
 
 #define LAYER_KEYMAP_BUTTON \
