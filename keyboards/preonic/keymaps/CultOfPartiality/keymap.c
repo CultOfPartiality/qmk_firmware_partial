@@ -55,11 +55,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_preonic_grid(
-  KC_GESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
-  KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
-  KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-  KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, LOWER,   LOWER,   KC_SPC,  KC_ENT,  RAISE,   RAISE,   KC_RALT, KC_RGUI, KC_RCTL
+  KC_GESC, KC_1,    KC_2,    KC_3,         KC_4,         KC_5,    KC_6,    KC_7,         KC_8,         KC_9,    KC_0,    KC_BSPC,
+  KC_TAB,  KC_Q,    KC_W,    KC_E,         KC_R,         KC_T,    KC_Y,    KC_U,         KC_I,         KC_O,    KC_P,    KC_DEL,
+  KC_TAB,  KC_A,    KC_S,    KC_D,         KC_F,         KC_G,    KC_H,    KC_J,         KC_K,         KC_L,    KC_SCLN, KC_QUOT,
+  KC_LSFT, KC_Z,    KC_X,    KC_C,         KC_V,         KC_B,    KC_N,    KC_M,         KC_COMM,      KC_DOT,  KC_SLSH, KC_RSFT,
+  KC_LCTL, KC_LGUI, KC_LALT, TD(TD_LOWER), TD(TD_LOWER), KC_SPC,  KC_ENT,  TD(TD_RAISE), TD(TD_RAISE), KC_RALT, KC_RGUI, KC_RCTL
 ),
 
 /* Qwerty (with homerow mods)
@@ -76,11 +76,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_MODTAP] = LAYOUT_preonic_grid(
-  KC_GESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
-  KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
-  KC_TAB,  HM_A,    HM_S,    HM_D,    HM_F,    KC_G,    KC_H,    HM_J,    HM_K,    HM_L,    HM_SCLN, KC_QUOT,
-  KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, LOWER,   LOWER,   KC_SPC,  KC_ENT,  RAISE,   RAISE,   KC_RALT, KC_RGUI, KC_RCTL
+  KC_GESC, KC_1,    KC_2,    KC_3,         KC_4,         KC_5,    KC_6,   KC_7,         KC_8,         KC_9,    KC_0,    KC_BSPC,
+  KC_TAB,  KC_Q,    KC_W,    KC_E,         KC_R,         KC_T,    KC_Y,   KC_U,         KC_I,         KC_O,    KC_P,    KC_DEL,
+  KC_TAB,  HM_A,    HM_S,    HM_D,         HM_F,         KC_G,    KC_H,   HM_J,         HM_K,         HM_L,    HM_SCLN, KC_QUOT,
+  KC_LSFT, KC_Z,    KC_X,    KC_C,         KC_V,         KC_B,    KC_N,   KC_M,         KC_COMM,      KC_DOT,  KC_SLSH, KC_RSFT,
+  KC_LCTL, KC_LGUI, KC_LALT, TD(TD_LOWER), TD(TD_LOWER), KC_SPC,  KC_ENT, TD(TD_RAISE), TD(TD_RAISE), KC_RALT, KC_RGUI, KC_RCTL
 ),
 
 /* Lower
@@ -163,7 +163,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           return false;
           break;
-        case LOWER:
+       /*  case LOWER:
           if (record->event.pressed) {
             layer_on(_LOWER);
             update_tri_layer(_LOWER, _RAISE, _ADJUST);
@@ -182,7 +182,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             update_tri_layer(_LOWER, _RAISE, _ADJUST);
           }
           return false;
-          break;
+          break; */
         case BACKLIT:
           if (record->event.pressed) {
             register_code(KC_RSFT);
@@ -258,7 +258,6 @@ bool dip_switch_update_user(uint8_t index, bool active) {
     }
     return true;
 }
-
 
 void matrix_scan_user(void) {
 #ifdef AUDIO_ENABLE
