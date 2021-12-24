@@ -143,11 +143,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
   [_ADJUST] = LAYOUT( \
-  XXXXXXX , XXXXXXX,  XXXXXXX , XXXXXXX , XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  KC_MODTAP  ,  XXXXXXX, KC_NORMAL, XXXXXXX,  XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  KC_NORMAL , XXXXXXX,   XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,                     XXXXXXX, C(G(KC_LEFT)), KC_MUTE, C(G(KC_RGHT)), XXXXXXX, XXXXXXX, \
-  XXXXXXX , XXXXXXX, XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-                   _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______ \
+  XXXXXXX   , XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                          XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, \
+  KC_MODTAP , KC_ASON,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                          XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, \
+  KC_NORMAL , KC_ASOFF, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                          XXXXXXX, C(G(KC_LEFT)), KC_MUTE, C(G(KC_RGHT)), XXXXXXX, XXXXXXX, \
+  XXXXXXX   , XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, \
+                        _______, _______, _______, _______, _______,        _______, _______, _______,       _______, _______ \
 ),
 /* MOUSE
  * ,-----------------------------------------.                    ,-----------------------------------------.
