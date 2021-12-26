@@ -92,3 +92,4 @@ compile_commands.json
 .clangd/
 .cache/
 keyboards/preonic/keymaps/CultOfPartiality/test.json
+keyboards/sofle/keymaps/CultOfPartiality/test.json
