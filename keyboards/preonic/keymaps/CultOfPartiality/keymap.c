@@ -38,6 +38,10 @@ enum preonic_keycodes {
 #define HM_K    RCTL_T(KC_K)
 #define HM_J    RSFT_T(KC_J)
 
+//Defines for windows desktop changine
+#define WD_LEFT C(G(KC_LEFT))
+#define WG_RGHT C(G(KC_RGHT)),
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -139,11 +143,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_ortho_5x12(
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,         KC_F9,   KC_F10,  KC_F11,  KC_F12,
-  MODTAP,  _______, DEBUG,   _______, RESET,   _______, _______, _______,       _______, _______,       _______, KC_DEL,
-  QWERTY,  _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, C(G(KC_LEFT)), _______, C(G(KC_RGHT)), _______, _______,
-  _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______,       _______, _______,       _______, _______,
-  _______, _______, _______, _______, _______, _______, _______, _______,       _______, _______,       _______, _______
+  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
+  MODTAP,  _______, DEBUG,   _______, RESET,   _______, _______, _______, _______, _______, _______, KC_DEL,
+  QWERTY,  _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, WD_LEFT, _______, WG_RGHT, _______, _______,
+  _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
 
 
