@@ -15,7 +15,6 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "muse.h"
 
 
 enum planck_layers {
@@ -105,14 +104,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_planck_grid(
-    _______, RESET,   DEBUG,   RGB_TOG, RGB_MOD, RGB_HUI,    RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
-    _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM,    AG_SWAP, QWERTY,  _______,  _______, _______, _______,
-    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,      MI_OFF,  TERM_ON, TERM_OFF, _______, _______, _______,
-    _______, _______, _______, XXXXXXX, _______, _______,    _______, _______, _______,  _______, _______, _______
+    _______, RESET,   DEBUG,   _______, _______, _______,          _______, _______,       _______, _______,       _______, KC_DEL ,
+    _______, _______, _______, AU_ON,   AU_OFF,  AG_NORM,          _______, C(G(KC_LEFT)), _______, C(G(KC_RGHT)), _______, _______,
+    _______, MUV_DE,  _______, _______, _______, _______,          _______, _______,       _______, _______,       _______, _______,
+    _______, _______, _______, XXXXXXX, _______, _______,          _______, _______,       _______, _______,       _______, _______
 ),
 
 /* Num Pad Layer
- *    This layer will latch unlike most layers, which should be interesting
  * ,-----------------------------------------------------------------------------------.
  * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -151,105 +149,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
-/* 
-bool muse_mode = false;
-uint8_t last_muse_note = 0;
-uint16_t muse_counter = 0;
-uint8_t muse_offset = 70;
-uint16_t muse_tempo = 50;
 
-bool encoder_update_user(uint8_t index, bool clockwise) {
-  if (muse_mode) {
-    if (IS_LAYER_ON(_RAISE)) {
-      if (clockwise) {
-        muse_offset++;
-      } else {
-        muse_offset--;
-      }
-    } else {
-      if (clockwise) {
-        muse_tempo+=1;
-      } else {
-        muse_tempo-=1;
-      }
-    }
-  } else {
-    if (clockwise) {
-      #ifdef MOUSEKEY_ENABLE
-        tap_code(KC_MS_WH_DOWN);
-      #else
-        tap_code(KC_PGDN);
-      #endif
-    } else {
-      #ifdef MOUSEKEY_ENABLE
-        tap_code(KC_MS_WH_UP);
-      #else
-        tap_code(KC_PGUP);
-      #endif
-    }
-  }
-    return true;
-}
 
-bool dip_switch_update_user(uint8_t index, bool active) {
-    switch (index) {
-        case 0: {
-#ifdef AUDIO_ENABLE
-            static bool play_sound = false;
-#endif
-            if (active) {
-#ifdef AUDIO_ENABLE
-                if (play_sound) { PLAY_SONG(plover_song); }
-#endif
-                layer_on(_ADJUST);
-            } else {
-#ifdef AUDIO_ENABLE
-                if (play_sound) { PLAY_SONG(plover_gb_song); }
-#endif
-                layer_off(_ADJUST);
-            }
-#ifdef AUDIO_ENABLE
-            play_sound = true;
-#endif
-            break;
-        }
-        case 1:
-            if (active) {
-                muse_mode = true;
-            } else {
-                muse_mode = false;
-            }
-    }
-    return true;
-} */
-
-/* void matrix_scan_user(void) {
-#ifdef AUDIO_ENABLE
-    if (muse_mode) {
-        if (muse_counter == 0) {
-            uint8_t muse_note = muse_offset + SCALE[muse_clock_pulse()];
-            if (muse_note != last_muse_note) {
-                stop_note(compute_freq_for_midi_note(last_muse_note));
-                play_note(compute_freq_for_midi_note(muse_note), 0xF);
-                last_muse_note = muse_note;
-            }
-        }
-        muse_counter = (muse_counter + 1) % muse_tempo;
-    } else {
-        if (muse_counter) {
-            stop_all_notes();
-            muse_counter = 0;
-        }
-    }
-#endif
-} */
-
-/* bool music_mask_user(uint16_t keycode) {
-  switch (keycode) {
-    case RAISE:
-    case LOWER:
-      return false;
-    default:
-      return true;
-  }
-} */
+//Combos: Lets give this a whirl
+const uint16_t PROGMEM combo_addDelete[] = {KC_P, KC_BSPC, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(combo_addDelete, KC_DEL)
+};
