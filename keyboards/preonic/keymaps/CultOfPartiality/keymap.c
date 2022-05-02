@@ -40,7 +40,21 @@ enum preonic_keycodes {
 
 //Defines for windows desktop changine
 #define WD_LEFT C(G(KC_LEFT))
-#define WG_RGHT C(G(KC_RGHT)),
+#define WG_RGHT C(G(KC_RGHT))
+
+//Defines for quick enable of tapdance in code. It seemed interesting, but the delay before an action fires it super annoying.
+//Might be able to tune it out, but I find after using the planck I don't really use it.
+//Comment the following out to not use the tapdance layer functions
+//#define USETAPDANCELAYERS
+
+
+#ifdef USETAPDANCELAYERS 
+  #define KC_LOWER TD(TD_LOWER)
+  #define KC_RAISE TD(TD_RAISE)
+#else
+  #define KC_LOWER MO(LOWER)
+  #define KC_RAISE MO(RAISE)
+#endif
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -59,11 +73,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_ortho_5x12(
-  KC_GESC, KC_1,    KC_2,    KC_3,         KC_4,         KC_5,    KC_6,    KC_7,         KC_8,         KC_9,    KC_0,    KC_BSPC,
-  KC_TAB,  KC_Q,    KC_W,    KC_E,         KC_R,         KC_T,    KC_Y,    KC_U,         KC_I,         KC_O,    KC_P,    KC_DEL,
-  KC_TAB,  KC_A,    KC_S,    KC_D,         KC_F,         KC_G,    KC_H,    KC_J,         KC_K,         KC_L,    KC_SCLN, KC_QUOT,
-  KC_LSFT, KC_Z,    KC_X,    KC_C,         KC_V,         KC_B,    KC_N,    KC_M,         KC_COMM,      KC_DOT,  KC_SLSH, KC_RSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, TD(TD_LOWER), TD(TD_LOWER), KC_SPC,  KC_ENT,  TD(TD_RAISE), TD(TD_RAISE), KC_RALT, KC_RGUI, KC_RCTL
+  KC_GESC, KC_1,    KC_2,    KC_3,     KC_4,     KC_5,    KC_6,    KC_7,     KC_8,     KC_9,    KC_0,    KC_BSPC,
+  KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,     KC_T,    KC_Y,    KC_U,     KC_I,     KC_O,    KC_P,    KC_DEL,
+  KC_TAB,  KC_A,    KC_S,    KC_D,     KC_F,     KC_G,    KC_H,    KC_J,     KC_K,     KC_L,    KC_SCLN, KC_QUOT,
+  KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,     KC_B,    KC_N,    KC_M,     KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT,
+  KC_LCTL, KC_LGUI, KC_LALT, KC_LOWER, KC_LOWER, KC_SPC,  KC_ENT,  KC_RAISE, KC_RAISE, KC_RALT, KC_RGUI, KC_RCTL
 ),
 
 /* Qwerty (with homerow mods)
@@ -84,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  KC_Q,    KC_W,    KC_E,         KC_R,         KC_T,    KC_Y,   KC_U,         KC_I,         KC_O,    KC_P,    KC_DEL,
   KC_TAB,  HM_A,    HM_S,    HM_D,         HM_F,         KC_G,    KC_H,   HM_J,         HM_K,         HM_L,    HM_SCLN, KC_QUOT,
   KC_LSFT, KC_Z,    KC_X,    KC_C,         KC_V,         KC_B,    KC_N,   KC_M,         KC_COMM,      KC_DOT,  KC_SLSH, KC_RSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, TD(TD_LOWER), TD(TD_LOWER), KC_SPC,  KC_ENT, TD(TD_RAISE), TD(TD_RAISE), KC_RALT, KC_RGUI, KC_RCTL
+  KC_LCTL, KC_LGUI, KC_LALT, KC_LOWER, KC_LOWER, KC_SPC,  KC_ENT,  KC_RAISE, KC_RAISE, KC_RALT, KC_RGUI, KC_RCTL
 ),
 
 /* Lower
@@ -93,9 +107,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |   ~  |   !  |   @  |   #  |   $  |   %  |   =  |   [  |   ]  |   (  |  F11 | Del  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Del  |      |      |      |      |      |   -  |   (  |   )  |   {  |  F12 |  |   |
+ * | Del  |      |      |      |Print |      |   -  |   (  |   )  |   {  |  F12 |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |   {  |   }  | Home |  \   |      |
+ * |      |      |      |      |      |      |   =  |   {  |   }  | Home |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------+-----------------------------------------'
@@ -103,8 +117,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT_ortho_5x12(
   KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_BSPC,
   KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_EQL,  KC_LBRC, KC_RBRC, KC_LPRN, KC_F11,  KC_DEL,
-  KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_MINS, KC_LPRN, KC_RPRN, KC_LCBR, KC_F12,  KC_PIPE,
-  _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LCBR, KC_RCBR, KC_HOME, KC_BSLS, _______,
+  KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_PSCR, KC_F5,   KC_MINS, KC_LPRN, KC_RPRN, KC_LCBR, KC_F12,  KC_BSLS,
+  _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_EQL,  KC_LCBR, KC_RCBR, KC_HOME, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 
