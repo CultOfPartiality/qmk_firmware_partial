@@ -52,8 +52,8 @@ enum preonic_keycodes {
   #define KC_LOWER TD(TD_LOWER)
   #define KC_RAISE TD(TD_RAISE)
 #else
-  #define KC_LOWER MO(LOWER)
-  #define KC_RAISE MO(RAISE)
+  #define KC_LOWER MO(_LOWER)
+  #define KC_RAISE MO(_RAISE)
 #endif
 
 
@@ -222,7 +222,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           return false;
           break;
       }
-    return true;
+      update_tri_layer(_LOWER, _RAISE, _ADJUST);
+      return true;
 };
 
 bool muse_mode = false;
