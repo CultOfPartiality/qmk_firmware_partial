@@ -56,6 +56,12 @@
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
 
+#define MK_KINETIC_SPEED
+#define MOUSEKEY_INTERVAL 16
+#define MOUSEKEY_INITIAL_SPEED 1
+#define MOUSEKEY_MOVE_DELTA 2
+#define MOUSEKEY_ACCELERATED_SPEED 60
+
 #undef  TAPPING_TERM // Remove the default vaule set in the sofle keymap
 #define TAPPING_TERM 170
 
