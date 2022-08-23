@@ -9,5 +9,10 @@
 #undef  TAPPING_TERM // Remove the default vaule set in the sofle keymap
 #define TAPPING_TERM 170
 
+#define MK_KINETIC_SPEED
+#define MOUSEKEY_INTERVAL 16
+#define MOUSEKEY_INITIAL_SPEED 1
+#define MOUSEKEY_MOVE_DELTA 2
+#define MOUSEKEY_ACCELERATED_SPEED 60
 
 //#define COMBO_COUNT 1
