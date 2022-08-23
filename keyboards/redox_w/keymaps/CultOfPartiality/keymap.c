@@ -11,8 +11,7 @@ enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   SYMB,
   NAV,
-  ADJUST,
-  MOUSE
+  ADJUST
 };
 
 //
@@ -22,6 +21,7 @@ enum custom_keycodes {
 //Layer changes
 #define SYM_L   MO(_SYMB)
 #define NAV_L   MO(_NAV)
+#define MOU_L   MO(_MOUSE)
 
 //Keys with modifier: Control
 #define KC_CLFT C(KC_LEFT)
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     KC_LCTL ,KC_LGUI ,KC_LALT ,KC_ALAS ,     SYM_L       ,KC_SPC  ,KC_ENT  ,        KC_BSPC ,KC_ENT  ,    NAV_L        ,MOUSE   ,KC_EQL  ,KC_RGUI ,KC_RCTL
+     KC_LCTL ,KC_LGUI ,KC_LALT ,KC_ALAS ,     SYM_L       ,KC_SPC  ,KC_ENT  ,        KC_BSPC ,KC_ENT  ,    NAV_L        ,MOU_L   ,KC_EQL  ,KC_RGUI ,KC_RCTL
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
