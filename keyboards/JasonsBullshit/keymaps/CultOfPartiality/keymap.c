@@ -21,7 +21,8 @@ enum planck_layers {
   _LOWER,
   _RAISE,
   _ADJUST,
-  _NUMPAD
+  _NUMPAD,
+  _MOUSE
 };
 
 enum planck_keycodes {
@@ -32,6 +33,7 @@ enum planck_keycodes {
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define NUMPAD MO(_NUMPAD)
+#define MOUSE MO(_MOUSE)
 
 
 //Defines for windows desktop changine
@@ -58,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_2,    KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,     KC_T,               KC_Y,    KC_U,     KC_I,     KC_O,    KC_P,    KC_DEL,  KC_7,
   KC_3,    KC_TAB,  KC_A,    KC_S,    KC_D,     KC_F,     KC_G,               KC_H,    KC_J,     KC_K,     KC_L,    KC_SCLN, KC_QUOT, KC_8,
   KC_4,    KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,     KC_B,               KC_N,    KC_M,     KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, KC_9,
-  KC_LCTL, KC_LCTL, KC_LGUI, KC_LALT, LOWER,    LOWER,   KC_SPC,              KC_ENT,  RAISE,    RAISE,    KC_RALT, KC_RGUI, KC_RCTL, KC_0
+  KC_LCTL, KC_LCTL, KC_LGUI, KC_LALT, LOWER,    LOWER,   KC_SPC,              KC_ENT,  RAISE,    MOUSE,    KC_RALT, KC_RGUI, KC_RCTL, KC_0
 ),
 
 /* Lower
@@ -117,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, _______,            _______, WD_LEFT, _______, WG_RGHT, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,            _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,            _______, _______, _______, _______, _______, _______, _______
-)
+),
 
 // /* Num Pad Layer
 //  * ,-----------------------------------------------------------------------------------.
@@ -135,7 +137,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //     XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,    XXXXXXX, KC_4, KC_5, KC_6,   XXXXXXX, XXXXXXX,
 //     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, KC_1, KC_2, KC_3,   KC_ENT,  XXXXXXX,
 //     _______, _______, _______, NUMPAD,  XXXXXXX, _______,    _______, KC_0, KC_0, KC_DOT, KC_ENT,  _______
-// )
+// ),
+
+/* Mouse layer
+ * ,-----------------------------------------------------------------------------------.
+ * |      | Reset|Debug | RGB  |RGBMOD| HUE+ | HUE- | SAT+ | SAT- |BRGTH+|BRGTH-|  Del |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |MUSmod|Aud on|Audoff|AGnorm|AGswap|Qwerty|Colemk|Dvorak|Plover|      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |Voice-|Voice+|Mus on|Musoff|MIDIon|MIDIof|TermOn|TermOf|      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |             |      |      |      |      |      |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_MOUSE] = LAYOUT_ortho_5x14(
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX,            XXXXXXX, XXXXXXX, KC_WH_U, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,            XXXXXXX, KC_BTN1, KC_BTN3, KC_BTN2, XXXXXXX, XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, C(KC_X), C(KC_C), C(KC_V), XXXXXXX,            XXXXXXX, XXXXXXX, KC_WH_D, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______,            _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+)
 
 };
 
