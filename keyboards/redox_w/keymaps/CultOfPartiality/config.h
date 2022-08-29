@@ -23,5 +23,5 @@
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
 
-#define COMBO_TERM 15
+#define COMBO_TERM 20
 #define COMBO_STRICT_TIMER
