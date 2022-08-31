@@ -4,3 +4,6 @@ Use symbol layer on left hand for "slow" symbols ("[]" perhaps?)
 Easier access to +, =, numpad?
 Relocate settings trigger?
 Fill blank keys on base layer
+
+
+Try unified NAV layer to reduce reach for mouse mode button
