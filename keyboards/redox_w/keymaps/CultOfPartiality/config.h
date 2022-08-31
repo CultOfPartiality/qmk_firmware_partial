@@ -12,10 +12,13 @@
 #define AUTO_SHIFT_NO_SETUP
 
 #define MK_KINETIC_SPEED
-#define MOUSEKEY_INTERVAL 16
-#define MOUSEKEY_INITIAL_SPEED 1
-#define MOUSEKEY_MOVE_DELTA 2
-#define MOUSEKEY_ACCELERATED_SPEED 60
+#define MOUSEKEY_INTERVAL 16            //ms between cursor movements
+#define MOUSEKEY_INITIAL_SPEED 0
+#define MOUSEKEY_MOVE_DELTA 0.4         //Speed step size
+#define MOUSEKEY_ACCELERATED_SPEED 3000 //?
+#define MOUSEKEY_BASE_SPEED 12000       //Max speed at which acceleration stops
+
+#define MOUSEKEY_MAX_SPEED 30
 
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
