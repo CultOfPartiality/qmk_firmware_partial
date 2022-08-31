@@ -8,7 +8,6 @@ enum layer_names{
     _NAV,
     _ADJUST,
     _NUMPAD,
-    _MOUSE,
     _SETTINGS
 
 };
@@ -25,7 +24,6 @@ enum custom_keycodes {
 //Layer changes
 #define SYM_L   MO(_SYMB)
 #define NAV_L   MO(_NAV)
-#define MOU_L   MO(_MOUSE)
 #define SET_L   MO(_SETTINGS)
 #define NUM_L   MO(_NUMPAD)
 
