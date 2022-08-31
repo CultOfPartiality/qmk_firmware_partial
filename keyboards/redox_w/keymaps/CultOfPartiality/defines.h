@@ -19,7 +19,7 @@ enum custom_keycodes {
   MOD_DIS
 };
 
-// Shortcuts to make keymap more readable
+/* Shortcuts to make keymap more readable */
 
 //Layer changes
 #define SYM_L   MO(_SYMB)
