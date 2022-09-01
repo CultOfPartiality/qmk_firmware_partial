@@ -6,7 +6,6 @@
 //define combo names and number of combos
 enum combo_list {
     QP_ESC,
-    CAPS_COMBO,
     EM_EMAIL,
     COMBO_LENGTH
 };
