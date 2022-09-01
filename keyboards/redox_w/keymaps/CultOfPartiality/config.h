@@ -11,6 +11,9 @@
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
 
+//Caps Word - Single word capslock. If this is too easy to enter might want to set as a combo
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
 #define MK_KINETIC_SPEED
 #define MOUSEKEY_INTERVAL 16            //ms between cursor movements
 #define MOUSEKEY_INITIAL_SPEED 105

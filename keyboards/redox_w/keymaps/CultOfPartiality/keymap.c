@@ -1,9 +1,12 @@
+// Normal QMK Include
 #include QMK_KEYBOARD_H
 
 // Split sections into different file for clarity
 #include "defines.h"
 #include "combos.h"
 
+// Prototype function definitions
+void update_leds(void);
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -127,30 +130,48 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-layer_state_t layer_state_set_user(layer_state_t state) {
+layer_state_t highest_layer = 0;
 
+layer_state_t layer_state_set_user(layer_state_t state) {
+    //Map the highest layer out to be used by LEDs
+    highest_layer = get_highest_layer(state);
     //Activate adjust layer if both symb and nav layers are active at the same time
     state = update_tri_layer_state(state, _SYMB, _NAV, _ADJUST);
-
-    //Turn LEDs on on the receiver depending on top layer active
-    switch (get_highest_layer(state)) {
-        case _QWERTY:
-        case _QWERTY_MOD:
-            set_led_off;
-            break;
-        case _SYMB:
-            set_led_green;
-            break;
-        case _NAV:
-            set_led_blue;
-            break;
-        case _ADJUST:
-            set_led_red;
-            break;
-        default:
-            break;
-    }
+    update_leds();
   return state;
+}
+
+void caps_word_set_user(bool active) {
+    //When this callback happens update the LEDs
+    update_leds();
+}
+
+// Enable leds to be updated in multiple places and not just layer change callback
+void update_leds(void){
+    //Turn LEDs on on the receiver depending on top layer active
+    if(is_caps_word_on()){
+        red_led_on;
+        grn_led_on;
+        blu_led_on;
+    }
+    else if (highest_layer > _QWERTY_MOD){
+        switch (highest_layer) {
+            case _SYMB:
+                set_led_green;
+                break;
+            case _NAV:
+                set_led_blue;
+                break;
+            case _ADJUST:
+                set_led_red;
+                break;
+            default:
+                break;
+        }
+    }
+    else{
+        set_led_off;
+    }
 }
 
 
