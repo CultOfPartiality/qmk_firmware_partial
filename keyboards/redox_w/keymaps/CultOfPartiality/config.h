@@ -11,7 +11,7 @@
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
 
-//Caps Word - Single word capslock. If this is too easy to enter might want to set as a combo
+//Caps Word - Single word capslock.
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 #define MK_KINETIC_SPEED
