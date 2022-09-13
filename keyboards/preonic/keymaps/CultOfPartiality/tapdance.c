@@ -1,6 +1,6 @@
 #include "tapdance.h"
 #include QMK_KEYBOARD_H
-#include "layerdefines.h"
+#include "defines.h"
 
 /////////////////////
 //tap dance stuff

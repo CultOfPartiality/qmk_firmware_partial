@@ -1,24 +1,19 @@
-/* Copyright 2015-2021 Jack Humbert
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
+// Normal QMK Include
 #include QMK_KEYBOARD_H
-#include "layerdefines.h"
-#include "muse.h"
-#include "tapdance.h"
 
+// Split sections into different files for clarity
+#include "muse.h"
+#include "defines.h"
+//#include "combos.h"
+//#include "tapdance.h"
+
+enum preonic_layers {
+  _QWERTY,
+  _MODTAP,
+  _LOWER,
+  _RAISE,
+  _ADJUST
+};
 
 enum preonic_keycodes {
   QWERTY = SAFE_RANGE,
@@ -28,19 +23,6 @@ enum preonic_keycodes {
   BACKLIT
 };
 
-//Define homerow mod shorthands
-#define HM_A    LGUI_T(KC_A)
-#define HM_S    LALT_T(KC_S)
-#define HM_D    LCTL_T(KC_D)
-#define HM_F    LSFT_T(KC_F)
-#define HM_SCLN RGUI_T(KC_SCLN)
-#define HM_L    RALT_T(KC_L)
-#define HM_K    RCTL_T(KC_K)
-#define HM_J    RSFT_T(KC_J)
-
-//Defines for windows desktop changine
-#define WD_LEFT C(G(KC_LEFT))
-#define WG_RGHT C(G(KC_RGHT))
 
 //Defines for quick enable of tapdance in code. It seemed interesting, but the delay before an action fires it super annoying.
 //Might be able to tune it out, but I find after using the planck I don't really use it.
@@ -48,7 +30,7 @@ enum preonic_keycodes {
 //#define USETAPDANCELAYERS
 
 
-#ifdef USETAPDANCELAYERS 
+#ifdef USETAPDANCELAYERS
   #define KC_LOWER TD(TD_LOWER)
   #define KC_RAISE TD(TD_RAISE)
 #else
@@ -159,8 +141,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_ortho_5x12(
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   MODTAP,  _______, DEBUG,   _______, RESET,   _______, _______, _______, _______, _______, _______, KC_DEL,
-  QWERTY,  _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, WD_LEFT, _______, WG_RGHT, _______, _______,
-  _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
+  QWERTY,  _______, _______, _______, _______, _______, _______, WD_LEFT, _______, WG_RGHT, _______, _______,
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
 

@@ -26,50 +26,37 @@
 
 #define MUSIC_MASK (keycode != KC_NO)
 
-/*
- * MIDI options
- */
-
-/* enable basic MIDI features:
-   - MIDI notes can be sent when in Music mode is on
-*/
-
 #define MIDI_BASIC
-
-/* enable advanced MIDI features:
-   - MIDI notes can be added to the keymap
-   - Octave shift and transpose
-   - Virtual sustain, portamento, and modulation wheel
-   - etc.
-*/
-//#define MIDI_ADVANCED
-
-/* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
-//#define MIDI_TONE_KEYCODE_OCTAVES 2
-
 
 #define GRAVE_ESC_CTRL_OVERRIDE
 
 #define TAPPING_TOGGLE 1
 #undef  TAPPING_TERM // Remove the default vaule set in the sofle keymap
-#define TAPPING_TERM 170
+#define TAPPING_TERM 200
 
-#define ONESHOT_TAP_TOGGLE 5
-#define ONESHOT_TIMEOUT 3000
-
-#define MK_KINETIC_SPEED
-#define MOUSEKEY_INTERVAL 16
-#define MOUSEKEY_INITIAL_SPEED 3
-#define MOUSEKEY_MOVE_DELTA 2
-#define MOUSEKEY_ACCELERATED_SPEED 80
-
-// From looking at miryoku
-//
-// Prevent normal rollover on alphas from accidentally triggering mods.
-#define IGNORE_MOD_TAP_INTERRUPT
-// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define TAPPING_FORCE_HOLD
 // Auto Shift
 #define NO_AUTO_SHIFT_ALPHA
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
+
+//Caps Word - Single word capslock.
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+#define MK_KINETIC_SPEED
+#define MOUSEKEY_INTERVAL 16            //ms between cursor movements
+#define MOUSEKEY_INITIAL_SPEED 105
+#define MOUSEKEY_MOVE_DELTA 9          //Speed step size
+#define MOUSEKEY_ACCELERATED_SPEED 1600 //?
+#define MOUSEKEY_BASE_SPEED 1800        //Max speed at which acceleration stops
+
+#define ONESHOT_TAP_TOGGLE 5
+#define ONESHOT_TIMEOUT 3000
+
+// Prevent normal rollover on alphas from accidentally triggering mods.
+#define IGNORE_MOD_TAP_INTERRUPT
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_FORCE_HOLD
+
+//#define COMBO_TERM 20
+//#define COMBO_STRICT_TIMER
