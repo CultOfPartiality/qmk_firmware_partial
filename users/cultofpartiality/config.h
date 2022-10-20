@@ -1,3 +1,5 @@
+#pragma once
+
 #define GRAVE_ESC_CTRL_OVERRIDE
 
 
@@ -24,7 +26,7 @@
 //Caps Word - Single word capslock.
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-#define COMBO_COUNT 1
+//#define COMBO_COUNT 1
 #define COMBO_TERM 20
 #define COMBO_STRICT_TIMER
 
