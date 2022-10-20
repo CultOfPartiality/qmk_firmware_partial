@@ -18,6 +18,6 @@
 
 #include "quantum.h"
 
-#if defined(KEYBOARD_JasonsBullshit_rev1)
+#if defined(KEYBOARD_jasonsbullshit_rev1)
 #    include "rev1.h"
 #endif  // Planck revisions
