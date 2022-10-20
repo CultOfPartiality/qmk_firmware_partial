@@ -32,7 +32,6 @@ enum planck_keycodes {
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define NUMPAD MO(_NUMPAD)
-#define MOUSE MO(_MOUSE)
 
 
 //Defines for windows desktop changine
