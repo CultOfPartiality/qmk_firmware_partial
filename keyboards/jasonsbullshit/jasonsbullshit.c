@@ -1,4 +1,4 @@
-#include "JasonsBullshit.h"
+#include "jasonsbullshit.h"
 
 // #ifdef SWAP_HANDS_ENABLE
 // __attribute__ ((weak))
