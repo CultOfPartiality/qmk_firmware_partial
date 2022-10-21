@@ -48,22 +48,4 @@
 // Most tactile encoders have detents every 4 stages
 #define ENCODER_RESOLUTION 4
 
-
-#define GRAVE_ESC_CTRL_OVERRIDE
-
-// Auto Shift
-#define NO_AUTO_SHIFT_ALPHA
-#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
-#define AUTO_SHIFT_NO_SETUP
-
-#define MK_KINETIC_SPEED
-#define MOUSEKEY_INTERVAL 16
-#define MOUSEKEY_INITIAL_SPEED 1
-#define MOUSEKEY_MOVE_DELTA 2
-#define MOUSEKEY_ACCELERATED_SPEED 60
-
-#undef  TAPPING_TERM // Remove the default vaule set in the sofle keymap
-#define TAPPING_TERM 170
-
-
 #define COMBO_COUNT 1
