@@ -37,14 +37,6 @@ enum custom_keycodes {
 #define HM_K    RCTL_T(KC_K)
 #define HM_J    RSFT_T(KC_J)
 
-//Keys with modifier: Control
-#define KC_CLFT C(KC_LEFT)
-#define KC_CRHT C(KC_RIGHT)
-
-//Keys with modifiers: GUI and Control
-#define KC_PWIN C(G(KC_LEFT))
-#define KC_NWIN C(G(KC_RIGHT))
-
 #define KC_ALAS LALT_T(KC_PAST)
 #define KC_CTPL LCTL_T(KC_BSLS)
 

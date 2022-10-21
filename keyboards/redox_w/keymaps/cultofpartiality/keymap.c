@@ -1,6 +1,9 @@
 // Normal QMK Include
 #include QMK_KEYBOARD_H
 
+// Userspace
+#include "cultofpartiality.h"
+
 // Split sections into different file for clarity
 #include "defines.h"
 #include "combos.h"
