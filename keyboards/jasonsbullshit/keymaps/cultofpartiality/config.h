@@ -19,4 +19,4 @@
 #undef  TAPPING_TERM // Remove the default vaule set in the sofle keymap
 #define TAPPING_TERM 170
 
-#define COMBO_COUNT 1
+
