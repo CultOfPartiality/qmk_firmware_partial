@@ -8,6 +8,7 @@
 //Keys with modifier: Control
 #define KC_CLFT C(KC_LEFT)
 #define KC_CRHT C(KC_RIGHT)
+#define KM_CSHT C(KC_LSFT)
 
 //Keys with modifiers: GUI and Control
 #define KC_PWIN C(G(KC_LEFT))
