@@ -1,4 +1,4 @@
-/* Copyright 2018 Jack Humbert <jack.humb@gmail.com>
+/* Copyright 2022 Jason Wridgway
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,6 @@
 
 #include "quantum.h"
 
-#if defined(KEYBOARD_jasonsbullshit_rev1)
+#if defined(KEYBOARD_bored_rev1)
 #    include "rev1.h"
-#endif  // Planck revisions
+#endif  // Bored revisions
