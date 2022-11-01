@@ -1,21 +1,14 @@
-Planck
+Bored
 ===
 
-![Planck](http://i.imgur.com/q2M3uEU.jpg)
+![Bored](https://i.imgur.com/q2M3uEU.jpg)
 
-A compact 40% (12x4) ortholinear keyboard kit made and sold by OLKB and Massdrop. [More info on qmk.fm](http://qmk.fm/planck/)
+A compact 65% (14x5) ortholinear keyboard kit. [More info on GitHub if I ever release this](https://github.com/CultOfPartiality/customkeyboardpcb/)
 
-Keyboard Maintainer: [Jack Humbert](https://github.com/jackhumbert)  
-Hardware Supported: Planck PCB rev1, rev2, rev3, rev4, rev5, rev6; Planck Light, Planck EZ  
-Hardware Availability: [OLKB.com](https://olkb.com), [Massdrop](https://www.massdrop.com/buy/planck-mechanical-keyboard?mode=guest_open), [Ergodox (Planck EZ)](https://ergodox-ez.com/pages/planck)
+Born of the desire to devise my own PCB, build something ortho, but fit an existing off-the-self keyboard case. Well, mostly from being bored during having Covid, and wanting to work on using PCB design software. Sadly due to my addled brain, I used EasyEDA rather than KiCad.
 
-Make example for this keyboard (after setting up your build environment):
+The current version fits the GH60 case, as that was one I found the drawings for, but an Anne Pro formfactor is possible.
 
-    make planck/rev4:default
-
-Install examples:
-
-    make planck/rev5:default:dfu         # For Planck rev5 or earlier and Planck Light
-    make planck/rev6:default:dfu-util    # For Planck rev6
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+Keyboard Maintainer: [Jason Wridgway](https://github.com/cultofpartiality)  
+Hardware Supported: Rev 1 Hack, rev 2 in the works
+Hardware Availability: 4 extra rev 1 PCBs currently on my shelf
