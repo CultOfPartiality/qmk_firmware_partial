@@ -9,6 +9,9 @@
 #define KC_CLFT C(KC_LEFT)
 #define KC_CRHT C(KC_RIGHT)
 #define KM_CSHT C(KC_LSFT)
+#define KM_CUT  C(KC_X)
+#define KM_COPY C(KC_C)
+#define KM_PAST C(KC_V)
 
 //Keys with modifiers: GUI and Control
 #define KC_PWIN C(G(KC_LEFT))
@@ -44,13 +47,13 @@ Bottom |  L4B,  L3B,  L2B,  L1B,  L0B   || R0B,  R1B,  R2B,  R3B,  R4B   |
 #define NAV_L4B _______
 #define NAV_L3T XXXXXXX
 #define NAV_L3M KC_MS_L
-#define NAV_L3B _______
+#define NAV_L3B KM_CUT
 #define NAV_L2T KC_MS_U
 #define NAV_L2M KC_MS_D
-#define NAV_L2B _______
+#define NAV_L2B KM_COPY
 #define NAV_L1T XXXXXXX
 #define NAV_L1M KC_MS_R
-#define NAV_L1B _______
+#define NAV_L1B KM_PAST
 #define NAV_L0T KC_WH_U
 #define NAV_L0M KC_WH_D
 #define NAV_L0B XXXXXXX
