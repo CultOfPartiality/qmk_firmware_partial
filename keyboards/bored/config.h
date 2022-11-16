@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x03A8
 #define MANUFACTURER    JWridgway
-#define PRODUCT         BoredV1
+
 
 /* key matrix size */
 #define MATRIX_ROWS 10
@@ -31,7 +31,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Planck PCB default pin-out */
 #define MATRIX_ROW_PINS { B7, B2, F0, F1, F4, D3, D2, F7, F6, F5 } //
 #define MATRIX_COL_PINS { B1, B6, B5, B4, D7, D6, D4 } //, E6, E2, C7, C6, D5 }
-#define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
