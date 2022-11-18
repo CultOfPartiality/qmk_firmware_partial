@@ -20,4 +20,6 @@
 
 #if defined(KEYBOARD_bored_rev1)
 #    include "rev1.h"
+#elif defined (KEYBOARD_bored_rev2)
+#    include "rev2.h"
 #endif  // Bored revisions
