@@ -1,6 +1,9 @@
 // Normal QMK Include
 #include QMK_KEYBOARD_H
 
+// Userspace
+#include "cultofpartiality.h"
+
 // Split sections into different files for clarity
 #include "muse.h"
 #include "defines.h"
@@ -118,11 +121,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------|-----------------------------------------'
  */
 [_RAISE] = LAYOUT_ortho_5x12(
-  KC_GRV,  _______, _______, _______, _______, _______,     KC_6,    KC_7,       KC_8,    KC_UNDS,    KC_0,    KC_BSPC,
-  _______, _______, _______, KC_MS_U, _______, _______,     KC_PGUP, C(KC_LEFT), KC_UP,   C(KC_RGHT), KC_0,    KC_DEL,
-  _______, _______, KC_MS_L ,KC_MS_D, KC_MS_R, KC_WH_D,     KC_PGDN, KC_LEFT,    KC_DOWN, KC_RGHT,    KC_RBRC, KC_BSLS,
-  _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), _______,     _______,  KC_HOME,   XXXXXXX, KC_END,     KC_PGDN, _______,
-  _______, _______, _______, _______, _______, _______,     _______, _______,    XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX
+  KC_GRV,  _______, _______, _______, _______, _______,      KC_6,    KC_7,    KC_8,    KC_UNDS, KC_0,    KC_BSPC,
+  _______, NAV_L4T, NAV_L3T, NAV_L2T, NAV_L1T, NAV_L0T, /**/ NAV_R0T, NAV_R1T, NAV_R2T, NAV_R3T, NAV_R4T, KC_DEL,
+  _______, NAV_L4M, NAV_L3M, NAV_L2M, NAV_L1M, NAV_L0M, /**/ NAV_R0M, NAV_R1M, NAV_R2M, NAV_R3M, NAV_R4M, KC_BSLS,
+  _______, NAV_L4B, NAV_L3B, NAV_L2B, NAV_L1B, NAV_L0B, /**/ NAV_R0B, NAV_R1B, NAV_R2B, NAV_R3B, NAV_R4B, _______,
+  _______, _______, _______, _______, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 ),
 
 /* Adjust (Lower + Raise)
@@ -139,8 +142,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_ortho_5x12(
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
-  MODTAP,  _______, DEBUG,   _______, RESET,   _______, _______, _______, _______, _______, _______, KC_DEL,
+  RESET,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
+  MODTAP,  _______, DEBUG,   _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL,
   QWERTY,  _______, _______, _______, _______, _______, _______, WD_LEFT, _______, WG_RGHT, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
