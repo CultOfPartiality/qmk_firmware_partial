@@ -58,11 +58,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_ortho_5x12(
-  KC_GESC, KC_1,    KC_2,    KC_3,     KC_4,     KC_5,    KC_6,    KC_7,     KC_8,     KC_9,    KC_0,    KC_BSPC,
-  KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,     KC_T,    KC_Y,    KC_U,     KC_I,     KC_O,    KC_P,    KC_DEL,
-  KC_TAB,  KC_A,    KC_S,    KC_D,     KC_F,     KC_G,    KC_H,    KC_J,     KC_K,     KC_L,    KC_SCLN, KC_QUOT,
-  KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,     KC_B,    KC_N,    KC_M,     KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, KC_LOWER, KC_LOWER, KC_SPC,  KC_ENT,  KC_RAISE, KC_RAISE, KC_RALT, KC_RGUI, KC_RCTL
+  KC_GESC, KC_1,    KC_2,    KC_3,     KC_4,     KC_5,   /**/ KC_6,    KC_7,     KC_8,     KC_9,    KC_0,    KC_BSPC,
+  KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,     KC_T,   /**/ KC_Y,    KC_U,     KC_I,     KC_O,    KC_P,    KC_DEL,
+  KC_TAB,  KC_A,    KC_S,    KC_D,     KC_F,     KC_G,   /**/ KC_H,    KC_J,     KC_K,     KC_L,    KC_SCLN, KC_QUOT,
+  KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,     KC_B,   /**/ KC_N,    KC_M,     KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT,
+  KC_LCTL, KC_LGUI, KC_LALT, KC_LOWER, KC_LOWER, KC_SPC, /**/ KC_ENT,  KC_RAISE, KM_CSHT,  KC_RALT, KC_RGUI, KC_RCTL
 ),
 
 /* Qwerty (with homerow mods)
@@ -79,20 +79,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_MODTAP] = LAYOUT_ortho_5x12(
-  KC_GESC, KC_1,    KC_2,    KC_3,         KC_4,         KC_5,    KC_6,   KC_7,         KC_8,         KC_9,    KC_0,    KC_BSPC,
-  KC_TAB,  KC_Q,    KC_W,    KC_E,         KC_R,         KC_T,    KC_Y,   KC_U,         KC_I,         KC_O,    KC_P,    KC_DEL,
-  KC_TAB,  HM_A,    HM_S,    HM_D,         HM_F,         KC_G,    KC_H,   HM_J,         HM_K,         HM_L,    HM_SCLN, KC_QUOT,
-  KC_LSFT, KC_Z,    KC_X,    KC_C,         KC_V,         KC_B,    KC_N,   KC_M,         KC_COMM,      KC_DOT,  KC_SLSH, KC_RSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, KC_LOWER, KC_LOWER, KC_SPC,  KC_ENT,  KC_RAISE, KC_RAISE, KC_RALT, KC_RGUI, KC_RCTL
+  KC_GESC, KC_1,    KC_2,    KC_3,     KC_4,     KC_5,   /**/ KC_6,    KC_7,     KC_8,     KC_9,    KC_0,    KC_BSPC,
+  KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,     KC_T,   /**/ KC_Y,    KC_U,     KC_I,     KC_O,    KC_P,    KC_DEL,
+  KC_TAB,  HM_A,    HM_S,    HM_D,     HM_F,     KC_G,   /**/ KC_H,    HM_J,     HM_K,     HM_L,    HM_SCLN, KC_QUOT,
+  KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,     KC_B,   /**/ KC_N,    KC_M,     KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT,
+  KC_LCTL, KC_LGUI, KC_LALT, KC_LOWER, KC_LOWER, KC_SPC, /**/ KC_ENT,  KC_RAISE, KM_CSHT,  KC_RALT, KC_RGUI, KC_RCTL
 ),
 
 /* Lower
  * ,-----------------------------------------+-----------------------------------------.
  * |   ~  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 | Bksp |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |   ~  |   !  |   @  |   #  |   $  |   %  |   =  |   [  |   ]  |   (  |  F11 | Del  |
+ * |      |   !  |   @  |   #  |   $  |   %  |   =  |   [  |   ]  |   (  |  F11 | Del  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Del  |      |      |      |Print |      |   -  |   (  |   )  |   {  |  F12 |  \   |
+ * |      |      |      |      |      |Print |   -  |   (  |   )  |   {  |  F12 |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |   =  |   {  |   }  | Home |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
@@ -100,11 +100,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------+-----------------------------------------'
  */
 [_LOWER] = LAYOUT_ortho_5x12(
-  KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
-  KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,     KC_EQL,  KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, KC_F12,
-  KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_PSCR, KC_F5,       KC_MINS, KC_LPRN, KC_RPRN, XXXXXXX, KC_PIPE, KC_BSLS,
-  _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,      KC_EQL,  KC_LCBR, KC_RCBR, XXXXXXX, _______, _______,
-  _______, _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, _______
+  KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   /**/ KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
+  XXXXXXX, KC_GRV,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /**/ KC_EQL,  KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, KC_F12,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, /**/ KC_MINS, KC_LPRN, KC_RPRN, XXXXXXX, KC_PIPE, KC_BSLS,
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /**/ KC_EQL,  KC_LCBR, KC_RCBR, XXXXXXX, _______, _______,
+  _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______
 ),
 
 /* Raise
