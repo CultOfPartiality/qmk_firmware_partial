@@ -8,4 +8,4 @@ So far I've only got this done for the navigation/raise layer, and only the "inn
 I'd like to start doing this for the symbols/lower layer, but the Planck's number row that I'm currently set on has made that difficult. Hopefully next time I come back to update this doco I'll have some sort of fix for this, which I'm suspecting will be to move the "[" and "]" key down to below the home row rather than above it. Then again, that muscle memory will take a little bit to break.
 ## Standard settings
 ### Mouse Mode
-Mouse mode has a number of tuning components for speed and accdeleration and delays. As such, when I finally sit down to tune these to work smoothly I'd want these to propagate to the other borads.
+Mouse mode has a number of tuning components for speed and accdeleration and delays. As such, when I finally sit down to tune these to work smoothly I'd want these to propagate to the other boards.

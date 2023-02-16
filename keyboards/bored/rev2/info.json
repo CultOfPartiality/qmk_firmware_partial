@@ -1,7 +1,13 @@
 {
-  "keyboard_name": "Bored V2",
+  "keyboard_name": "BoredV2",
   "url": "https://wridgway.net",
   "maintainer": "CultOfPartiality",
+  "manufacturer": "CultOfPartiality",
+  "usb": {
+    "vid": "0x03AB",
+    "pid": "0xABCD",
+    "device_version": "0.0.2"
+},
   "layouts": {
     "LAYOUT_ortho_5x14": {
       "layout": [
