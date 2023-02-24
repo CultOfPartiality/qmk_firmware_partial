@@ -1,0 +1,9 @@
+{
+    "keyboard_name": "Jason Manuform 5x6 V1",
+    "manufacturer": "JasonWridgway",
+    "usb": {
+        "vid": "0x6F77",
+        "pid": "0x0002",
+        "device_version": "0.0.1"
+    }
+}
