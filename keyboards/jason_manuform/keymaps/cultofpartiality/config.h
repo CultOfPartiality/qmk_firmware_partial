@@ -20,11 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
- // place overrides here
-#define DEFAULT_LAYER_SONGS { SONG(QWERTY_SOUND), \
-                              SONG(COLEMAK_SOUND), \
-                              SONG(DVORAK_SOUND) \
-                            }
 
 /* Select hand configuration */
 #define MASTER_LEFT
