@@ -14,8 +14,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                           /**/                      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                           /**/                      KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
    KC_LCTL, KC_LGUI, KC_LALT, KC_V,                                             /**/                                        KM_CSHT, KC_EQL,  KC_RGUI, KC_RCTL,
-                                            SYM_L,   KC_SPC,  KC_3,    KC_4,    /**/ KC_1,    KC_2,   KC_ENT,  NAV_L,
-                                                              KC_5,    KC_6,    /**/ KC_5,    KC_6
+                                            SYM_L,   KC_SPC,  KC_ENT,  KC_PGUP, /**/ KC_1,    KC_2,   KC_ENT,  NAV_L,
+                                                              KC_DEL,  KC_PGDN, /**/ KC_5,    KC_6
 ),
 [_SYMB] = LAYOUT(
    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                          /**/                       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
@@ -34,6 +34,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______, _______, _______, _______,                                          /**/                                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                             _______, _______, _______, _______, /**/ _______, _______, _______, _______,
                                                               _______, _______, /**/ _______, _______
+),
+[_ADJUST] = LAYOUT(
+   QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        /**/                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        /**/                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        /**/                       XXXXXXX, KC_PWIN, XXXXXXX, KC_NWIN, XXXXXXX, XXXXXXX,
+   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        /**/                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                          /**/                                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                            _______, XXXXXXX, XXXXXXX, XXXXXXX, /**/ XXXXXXX, XXXXXXX, XXXXXXX, _______,
+                                                              XXXXXXX, XXXXXXX, /**/ XXXXXXX, XXXXXXX
 )
 };
 
