@@ -281,3 +281,9 @@ const uint16_t PROGMEM combo_addDelete[] = {KC_P, KC_BSPC, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo_addDelete, KC_DEL)
 };
+
+
+void keyboard_post_init_user(void){
+    //Start with LEDs off
+    rgblight_setrgb(0,0,0);
+}
