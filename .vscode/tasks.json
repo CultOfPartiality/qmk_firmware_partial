@@ -3,16 +3,16 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "Build CultOfPartiality Keyboard",
-            "type": "shell",
-            "command": "qmk compile -kb ${input:selectKeyboard} -km cultofpartiality",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+      {
+        "label": "Build CultOfPartiality Keyboard",
+        "type": "shell",
+        "command": "qmk compile -kb ${input:selectKeyboard} -km cultofpartiality",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
         }
+      }
     ],
     "inputs": [
         {
@@ -23,6 +23,7 @@
             //{"label": "All", "value": "" },
             "redox_w",
             "planck/rev6",
+            "planck/rev7",
             "zombie_planck/rev6_drop",
             "bored/rev2",
             "preonic/rev3_drop",
