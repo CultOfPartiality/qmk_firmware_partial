@@ -41,7 +41,16 @@ Bottom |  L4B,  L3B,  L2B,  L1B,  L0B   || R0B,  R1B,  R2B,  R3B,  R4B   |
 */
 
 
-//Nav Layer
+/* Navigation Layer
+
+       |  Pinky    Ring     Mid      Index    Inner   |        | Inner    Index    Mid      Ring      Pinky   |
+-------+-----------------------------------------------        -----------------------------------------------+
+Top    |  XXXXXXX, XXXXXXX, Mouse U, XXXXXXX, M-Whl U |        | MMBtn,   Ctrl-L,  Up,      Ctrl-R,   XXXXXXX |
+Middle |  XXXXXXX, Mouse L, Mouse D, Mouse R, M-Whl D |        | LMBtn,   Left,    Down,    Right,    XXXXXXX |
+Bottom |  _______, Ctrl-X,  Ctrl-C,  Ctrl-V,  XXXXXXX |        | RMBtn,   Home,    XXXXXXX, End,      XXXXXXX |
+-------+-----------------------------------------------        -----------------------------------------------+
+*/
+
 #define NAV_L4T XXXXXXX
 #define NAV_L4M XXXXXXX
 #define NAV_L4B _______
