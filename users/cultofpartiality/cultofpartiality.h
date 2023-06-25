@@ -5,6 +5,9 @@
 
 /*  Keycode Defines - For Simplifing Layout  */
 
+//This key can be populated when desired, as opposed to a pass-through _______ or blocker XXXXXXX which should stay once in place
+#define _SPARE_ XXXXXXX
+
 //Keys with modifier: Control
 #define KC_CLFT C(KC_LEFT)
 #define KC_CRHT C(KC_RIGHT)

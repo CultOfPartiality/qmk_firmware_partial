@@ -8,6 +8,7 @@ Sick of copying settings from keyboard to keyboard as I keep developing my own l
 - More layers, accessable to the thumbs on space/enter?
     - Getting a sore hand when holding nav key (an inwards movement). Others solve this with alternating hands, but single hand nav is too important I think
     - There's an idea, mouse mode with right hand movement, left hand click?
+- Live definable macros
 
 ## Standardised Layouts
 So far I've only got this done for the navigation/raise layer, and only the "inner block" of keys (all those reached one up or down from the eight finger home positions, and the index fingers' inner row). This means the arrow keys, mouse mode keys, and other useful nav keys are always in the same place.

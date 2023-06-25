@@ -1,7 +1,7 @@
 #pragma once
 
+//Allow Control Escape to work
 #define GRAVE_ESC_CTRL_OVERRIDE
-
 
 //Mouse Keys Configuration
 #define MK_KINETIC_SPEED
