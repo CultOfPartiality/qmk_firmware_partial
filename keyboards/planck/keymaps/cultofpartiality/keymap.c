@@ -15,7 +15,10 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "muse.h"
+
+#ifndef ZOMBIE_PLANCK
+    #include "muse.h"
+#endif
 
 // Userspace
 #include "cultofpartiality.h"
@@ -306,8 +309,9 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo_addDelete, KC_DEL)
 };
 
-
+#ifndef ZOMBIE_PLANCK
 void keyboard_post_init_user(void){
     //Start with LEDs off
     rgblight_setrgb(0,0,0);
 }
+#endif
