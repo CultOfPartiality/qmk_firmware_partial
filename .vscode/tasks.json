@@ -21,14 +21,14 @@
           "description": "Which keyboard to build?",
           "options": [
             //{"label": "All", "value": "" },
-            "redox_w",
+            "bored/rev2",
+            "jason_manuform/cmd5x6v1",
+            "kprepublic/jj50",
             "planck/rev6",
             "planck/rev7",
-            "zombie_planck/rev6_drop",
-            "bored/rev2",
             "preonic/rev3_drop",
-            "jason_manuform/cmd5x6v1",
-            "kprepublic/jj50"
+            "redox_w",
+            "zombie_planck/rev6_drop",
           ]
         }
       ]
