@@ -22,6 +22,8 @@
 
 // Userspace
 #include "cultofpartiality.h"
+// Allows for multi-key definition macros for the keymap in userspace
+#define LAYOUT_planck_grid_wrapper(...)   LAYOUT_planck_grid(__VA_ARGS__)
 
 enum planck_layers {
   _QWERTY,
@@ -97,30 +99,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_planck_grid(
-    _______, NAV_L4T, NAV_L3T, NAV_L2T, NAV_L1T, NAV_L0T, /**/ NAV_R0T, NAV_R1T, NAV_R2T, NAV_R3T, NAV_R4T, _______,
-    _______, NAV_L4M, NAV_L3M, NAV_L2M, NAV_L1M, NAV_L0M, /**/ NAV_R0M, NAV_R1M, NAV_R2M, NAV_R3M, NAV_R4M, _______,
-    _______, NAV_L4B, NAV_L3B, NAV_L2B, NAV_L1B, NAV_L0B, /**/ NAV_R0B, NAV_R1B, NAV_R2B, NAV_R3B, NAV_R4B, _______,
-    _______, _______, _______, XXXXXXX, _______, KC_SPC,  /**/ KC_ENT,  _______, _______, _______, _______, _______
-),
-
-/* Test additional layer on the right thumb enter key
- *      Attempting to standardise this layout here, then will move to userspace
- * ,-----------------------------------------------------------------------------------.
- * |______|   !  |   @  |   #  |   $  |   %  |  ^   |   &  |   *  |   (  |   )  |______|
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |______|   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  |      |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |______|      |      |      |      |      |      |      |      |______|______|______|
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |______|______|______|______|      |      | LAYER|      |______|______|______|______|
- * `-----------------------------------------------------------------------------------'
-*/
-
-[_NUMBERS] = LAYOUT_planck_grid(
-    _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, /**/ KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
-    _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    /**/ KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _SPARE_,
-    _______, _SPARE_, _SPARE_, _SPARE_, _SPARE_, KC_F5,   /**/ _SPARE_, _SPARE_, _______, _______, _______, _______,
-    _______, _______, _______, XXXXXXX, XXXXXXX, _______, /**/ _______, XXXXXXX, _______, _______, _______, _______
+    _______, _______________NAV_LEFT_TOP________________, /**/ _______________NAV_RIGHT_TOP_______________, _______,
+    XXXXXXX, _______________NAV_LEFT_MID________________, /**/ _______________NAV_RIGHT_MID_______________, _______,
+    _______, _______________NAV_LEFT_BOT________________, /**/ _______________NAV_RIGHT_BOT_______________, _______,
+    _______, _______, _______, XXXXXXX, _______, _______, /**/ _______, _______, _______, _______, _______, _______
 ),
 
 /* Adjust (Lower + Raise)
