@@ -44,7 +44,7 @@ enum planck_keycodes {
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define NUMPAD MO(_NUMPAD)
-#define RAISE2 LT(_NUMBERS,KC_ENT)
+#define RAISE2 LT(_RAISE,KC_ENT)
 #define LOWER2 LT(_NUMBERS,KC_SPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, KC_GRV,  _SPARE_, _SPARE_, _SPARE_, _SPARE_, /**/ KC_EQL,  KC_LBRC, KC_RBRC, _SPARE_, _SPARE_, _______,
     _______, _SPARE_, _SPARE_, _SPARE_, _SPARE_, KC_PSCR, /**/ KC_MINS, KC_LPRN, KC_RPRN, _SPARE_, KC_PIPE, KC_BSLS,
     _______, _SPARE_, _SPARE_, _SPARE_, _SPARE_, _SPARE_, /**/ _SPARE_, _SPARE_, _SPARE_, _SPARE_, _SPARE_, _______,
-    _______, _______, _______, XXXXXXX, _______, KC_SPC,  /**/ KC_ENT,  _______, _______, _______, _______, _______
+    _______, _______, _______, XXXXXXX, _______, KC_SPC,  /**/ _______, _______, _______, _______, _______, _______
 ),
 
 /* Raise - Navigation
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______________NAV_LEFT_TOP________________, /**/ _______________NAV_RIGHT_TOP_______________, _______,
     _______, _______________NAV_LEFT_MID________________, /**/ _______________NAV_RIGHT_MID_______________, _______,
     _______, _______________NAV_LEFT_BOT________________, /**/ _______________NAV_RIGHT_BOT_______________, _______,
-    _______, _______, _______, XXXXXXX, _______, KC_SPC,  /**/ KC_ENT,  _______, _______, _______, _______, _______
+    _______, _______, _______, XXXXXXX, _______, KC_SPC,  /**/ _______, _______, _______, _______, _______, _______
 ),
 
 /* Test additional layer on the right thumb enter key
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, /**/ KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
     _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    /**/ KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _SPARE_,
     _______, _SPARE_, _SPARE_, _SPARE_, _SPARE_, KC_F5,   /**/ _SPARE_, _SPARE_, _______, _______, _______, _______,
-    _______, _______, _______, XXXXXXX, XXXXXXX, _______, /**/ _______, XXXXXXX, _______, _______, _______, _______
+    _______, _______, _______, XXXXXXX, XXXXXXX, _______, /**/ XXXXXXX, XXXXXXX, _______, _______, _______, _______
 ),
 
 /* Adjust (Lower + Raise)
