@@ -22,6 +22,8 @@
 
 // Userspace
 #include "cultofpartiality.h"
+// Allows for multi-key definition macros for the keymap in userspace
+#define LAYOUT_planck_grid_wrapper(...)   LAYOUT_planck_grid(__VA_ARGS__)
 
 enum planck_layers {
   _QWERTY,
@@ -93,9 +95,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_planck_grid(
-    _______, NAV_L4T, NAV_L3T, NAV_L2T, NAV_L1T, NAV_L0T, /**/ NAV_R0T, NAV_R1T, NAV_R2T, NAV_R3T, NAV_R4T, _______,
-    XXXXXXX, NAV_L4M, NAV_L3M, NAV_L2M, NAV_L1M, NAV_L0M, /**/ NAV_R0M, NAV_R1M, NAV_R2M, NAV_R3M, NAV_R4M, _______,
-    _______, NAV_L4B, NAV_L3B, NAV_L2B, NAV_L1B, NAV_L0B, /**/ NAV_R0B, NAV_R1B, NAV_R2B, NAV_R3B, NAV_R4B, _______,
+    _______, _______________NAV_LEFT_TOP________________, /**/ _______________NAV_RIGHT_TOP_______________, _______,
+    XXXXXXX, _______________NAV_LEFT_MID________________, /**/ _______________NAV_RIGHT_MID_______________, _______,
+    _______, _______________NAV_LEFT_BOT________________, /**/ _______________NAV_RIGHT_BOT_______________, _______,
     _______, _______, _______, XXXXXXX, _______, _______, /**/ _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 ),
 
