@@ -86,7 +86,6 @@ Bottom |  _______, Ctrl-X,  Ctrl-C,  Ctrl-V,  XXXXXXX |        | RMBtn,   Home, 
 #define NAV_R4M XXXXXXX
 #define NAV_R4B XXXXXXX
 
-
 #define _______________NAV_LEFT_TOP________________        NAV_L4T, NAV_L3T, NAV_L2T, NAV_L1T, NAV_L0T
 #define _______________NAV_LEFT_MID________________        NAV_L4M, NAV_L3M, NAV_L2M, NAV_L1M, NAV_L0M
 #define _______________NAV_LEFT_BOT________________        NAV_L4B, NAV_L3B, NAV_L2B, NAV_L1B, NAV_L0B
