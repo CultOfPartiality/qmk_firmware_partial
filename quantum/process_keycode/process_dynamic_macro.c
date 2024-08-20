@@ -289,3 +289,33 @@ bool process_dynamic_macro(uint16_t keycode, keyrecord_t *record) {
 
     return true;
 }
+
+
+
+// JTW - Allow calling macro recording starts and macro playing from code
+void dynamic_macro_record_start_command(int8_t direction){
+    if (macro_id == 0){
+        if(direction == 1){
+            dynamic_macro_record_start(&macro_pointer, macro_buffer, +1);
+            macro_id = 1;
+            return;
+        }
+        if(direction == -1){
+            dynamic_macro_record_start(&macro_pointer, r_macro_buffer, -1);
+            macro_id = 2;
+            return;
+        }
+    }
+}
+void dynamic_macro_record_play_command(int8_t direction){
+    if (macro_id == 0){
+        if(direction == 1){
+            dynamic_macro_play(macro_buffer, macro_end, +1);
+            return;
+        }
+        if(direction == -1){
+            dynamic_macro_play(r_macro_buffer, r_macro_end, -1);
+            return;
+        }
+    }
+}
