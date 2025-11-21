@@ -21,9 +21,9 @@
     "cols": ["F4", "F5", "B5", "B4", "E6", "D7", "C6", "D4", "D0", "D1", "D2", "D3"],
     "rows": ["F6", "B3", "B2", "B6"]
   },
-  "community_layouts": ["planck_mit", "ortho_4x12"],
+  "community_layouts": ["planck_mit", "planck_grid"],
   "layouts": {
-    "LAYOUT_ortho_4x12": {
+    "LAYOUT_planck_grid": {
       "layout": [
         {"label": "Tab", "matrix": [0, 0], "x": 0, "y": 0},
         {"label": "Q", "matrix": [0, 1], "x": 1, "y": 0},
